@@ -16,3 +16,25 @@ Extracts only the measurements on the mean and standard deviation for each measu
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## How code,_"run_analysis.R"_, works:
+#### Point 1
+Reading all data sets into R.
+
+#### point 2
+Merging the all the imported data sets.
+
+#### point 3
+Assigning descriptive activity names to name the activities in the data set.
+
+#### point 4
+Extracting only the measurements on the mean and standard deviation for each measurement.
+
+#### point 5
+Appropriately labeling of the data set with descriptive variable names using _regular expressions_.
+
+#### point 6.1
+First way to creat a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+#### point 6.2
+Second way to creat a second, independent tidy data set with the average of each variable for each activity and each subject.
