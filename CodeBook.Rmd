@@ -1,0 +1,54 @@
+---
+title: "Getting And Cleaning Data Course Project Code Book"
+author: "Reza Zahedi"
+date: "October 25, 2018"
+output: github_document
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE, cache=TRUE}
+source("./run_analysis.R")
+allnames <- cbind(oldnames, newnames)
+```
+
+## Data Transformations and other steps in _"run_analysis.R"_ :
+#### Point 1
+Reading all data sets into R.
+
+#### point 2
+Merging the all the imported data sets.
+
+#### point 3
+Assigning descriptive activity names to name the activities in the data set.
+
+#### point 4
+Extracting only the measurements on the mean and standard deviation for each measurement.
+
+#### point 5
+Appropriately labeling of the data set with descriptive variable names using _regular expressions_.
+
+#### point 6.1
+First way to creat a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+#### point 6.2
+Second way to creat a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+## Initial and Final variable names in data set:
+```{r, echo=FALSE, message=FALSE}
+library(knitr)
+library(kableExtra)
+library(dplyr)
+allnames <- as.data.frame(allnames)
+
+allnames <- rename(allnames, "Old Names" = "oldnames",
+             "New Names" = "newnames")
+
+kable(allnames) %>%
+     kable_styling(bootstrap_options = c("striped", "hover"),
+                   full_width = F)
+```
